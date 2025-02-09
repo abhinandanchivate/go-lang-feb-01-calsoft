@@ -5,8 +5,9 @@
 This is golang clean architecture template.
 
 ## Architecture
+![architecture](https://github.com/user-attachments/assets/1f3efb4f-d1d4-47c9-aae3-f1d910c65b17)
 
-![Clean Architecture](architecture.png)
+
 
 1. External system perform request (HTTP, gRPC, Messaging, etc)
 2. The Delivery creates various Model from request data
