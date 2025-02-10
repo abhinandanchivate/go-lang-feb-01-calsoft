@@ -65,13 +65,32 @@ After installing the `Go` extension, configure **VS Code settings** (`settings.j
 
 ```json
 {
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "onFocusChange",
+  "editor.wordWrap": "on",
+  "editor.fontSize": 20,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.fontSize": 20,
+  "redhat.telemetry.enabled": true,
+  "workbench.tree.indent": 12,
+  "editor.fontVariations": false,
+  "editor.formatOnPaste": true,
+  "workbench.editor.empty.hint": "hidden",
   "go.useLanguageServer": true,
   "go.formatTool": "gofmt",
   "go.lintTool": "golangci-lint",
   "go.testFlags": ["-v"],
   "go.toolsManagement.autoUpdate": true,
   "go.coverOnSave": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+
+  "gopls": {
+    "staticcheck": true,
+    "hoverKind": "FullDocumentation",
+    "usePlaceholders": true
+  }
 }
+
 ```
 
