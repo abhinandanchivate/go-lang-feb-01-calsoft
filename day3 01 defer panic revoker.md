@@ -1,4 +1,15 @@
+
 ## **Conditional Execution Using `defer`, `panic`, and `recover` in Go**
+## ** Best Practices for Using panic, defer, and recover
+
+✅ Good Practices
+Always use defer to clean up resources (closing files, releasing locks).
+Use recover() only at the top level to catch panics and prevent crashes.
+Avoid using panic for normal errors; use error handling instead.
+❌ Bad Practices
+Using panic for expected errors (use error instead).
+Relying on recover() too often (only use in critical areas like HTTP handlers).
+Placing recover() outside defer (it will not work!).
 
 ### **1. Understanding `defer`, `panic`, and `recover`**
 These three mechanisms allow Go to handle **error-prone execution flows** effectively:
