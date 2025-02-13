@@ -37,6 +37,13 @@ func main() {
     fmt.Println("File opened successfully")
 }
 ```
+Execution Sequence:
+Step 1: os.Open("example.txt") attempts to open the file.
+Step 2: If an error occurs (err != nil), the program enters the if block.
+Step 3: Prints "Error opening file: <error_message>" if the file does not exist or cannot be accessed.
+Step 4: Calls return, exiting the main function immediately if an error occurs.
+Step 5: If no error occurs, defer file.Close() is executed, scheduling file.Close() to run at the end of main().
+Step 6: "File opened successfully" is printed.
 🔹 **Why use `defer`?**
 - Ensures `file.Close()` is **executed even if an early return or error occurs**.
 - Improves **code readability** (close operation is placed near open operation).
